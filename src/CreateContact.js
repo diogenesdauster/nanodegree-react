@@ -10,7 +10,7 @@ class CreateContact extends Component {
         e.preventDefault()
         const values = serializeFrom(e.target,{hash: true})
         if(this.props.onCreateContact){
-            this.props.onCreateContact()
+            this.props.onCreateContact(values)
         }
     }
 

@@ -5,6 +5,7 @@ import App from "./components/App";
 import registerServiceWorker from "./registerServiceWorker";
 import { createStore } from "redux";
 import reducer from "./reducers";
+import { Provider } from "react-redux";
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
@@ -13,5 +14,10 @@ const store = createStore(
 );
 /* eslint-enable */
 
-ReactDOM.render(<App store={store} />, document.getElementById("root"));
+ReactDOM.render(
+  <Provider store={store}>
+    <App store={store} />
+  </Provider>,
+  document.getElementById("root")
+);
 registerServiceWorker();

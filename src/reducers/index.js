@@ -77,4 +77,4 @@ function calender(state = initialCalendarState, action) {
   }
 }
 
-export default combineReducers({ calender, food });
+export default combineReducers({ food, calender });

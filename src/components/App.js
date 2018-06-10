@@ -1,18 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { addRecipe, removeFromCalender } from "../actions";
 
 class App extends Component {
+  doThing = () => {
+    this.props.selectRecipe({});
+  };
   render() {
     console.log("Props", this.props);
     return <div>Hello World !!</div>;
   }
 }
 
-function mapStateToProps(calender) {
+function mapDispatchToProps(dispatch) {
+  return {
+    selectRecipe: data => dispatch(addRecipe(data)),
+    remove: data => dispatch(removeFromCalender(data))
+  };
+}
+
+function mapStateToProps(calendar) {
   const dayOrder = [
     "sunday",
     "monday",
-    "tueday",
+    "tuesday",
     "wednesday",
     "thursday",
     "friday",
@@ -20,14 +31,17 @@ function mapStateToProps(calender) {
   ];
 
   return {
-    calender: dayOrder.map(day => ({
+    calendar: dayOrder.map(day => ({
       day,
-      meals: Object.keys(calender[day]).reduce((meals, meal) => {
-        meals[day] = calender[day][meal] ? calender[day][meal] : null;
+      meals: Object.keys(calendar[day]).reduce((meals, meal) => {
+        meals[day] = calendar[day][meal] ? calendar[day][meal] : null;
         return meals;
       }, {})
     }))
   };
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

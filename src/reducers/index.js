@@ -52,8 +52,8 @@ const initialCalendarState = {
   }
 };
 
-function calender(state = initialCalendarState, action) {
-  const { day, recipe, meal } = action;
+function calendar(state = initialCalendarState, action) {
+  const { recipe, day, meal } = action;
 
   switch (action.type) {
     case ADD_RECIPE:
@@ -77,4 +77,4 @@ function calender(state = initialCalendarState, action) {
   }
 }
 
-export default combineReducers({ food, calender });
+export default combineReducers({ food, calendar });

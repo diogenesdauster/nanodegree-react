@@ -164,7 +164,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function mapStateToProps({ food, calender }) {
+function mapStateToProps({ food, calendar }) {
   const dayOrder = [
     "sunday",
     "monday",
@@ -178,8 +178,8 @@ function mapStateToProps({ food, calender }) {
   return {
     calendar: dayOrder.map(day => ({
       day,
-      meals: Object.keys(calender[day]).reduce((meals, meal) => {
-        meals[day] = calender[day][meal] ? food[calender[day][meal]] : null;
+      meals: Object.keys(calendar[day]).reduce((meals, meal) => {
+        meals[meal] = calendar[day][meal] ? food[calendar[day][meal]] : null;
         return meals;
       }, {})
     }))

@@ -39,7 +39,6 @@ export default class AddEntry extends Component {
 
   decrement = metric => {
     this.setState(state => {
-      console.log(state);
       const count = state[metric] - getMetricMetaInfo(metric).step;
 
       return {
@@ -105,8 +104,8 @@ export default class AddEntry extends Component {
               ) : (
                 <UdacitySteppers
                   value={value}
-                  onIncrement={this.increment}
-                  onDecrement={this.decrement}
+                  onIncrement={() => this.increment(key)}
+                  onDecrement={() => this.decrement(key)}
                   {...rest}
                 />
               )}

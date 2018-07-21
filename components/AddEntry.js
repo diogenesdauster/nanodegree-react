@@ -6,6 +6,7 @@ import UdacitySteppers from "./UdacitySteppers";
 import DateHeader from "./DateHeader";
 import Ionicons from "../node_modules/@expo/vector-icons/Ionicons";
 import TextButton from "./TextButton";
+import { submit, reset } from "../utils/api";
 
 function SubmitBtn({ onPress }) {
   return (
@@ -66,10 +67,13 @@ export default class AddEntry extends Component {
       sleep: 0,
       eat: 0
     });
+
+    submit({ key, entry });
   };
 
   reset = () => {
     const key = timeToString();
+    reset(key);
   };
 
   render() {

@@ -6,9 +6,8 @@ import {
   StyleSheet,
   Platform
 } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Entypo } from "@expo/vector-icons";
 import { white, purple, gray } from "../utils/colors";
-import Entypo from "../node_modules/@expo/vector-icons/Entypo";
 
 export default function UdacitySteppers({
   max,

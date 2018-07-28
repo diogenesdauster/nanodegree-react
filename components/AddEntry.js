@@ -14,7 +14,7 @@ import {
 import UdacitySlider from "./UdacitySlider";
 import UdacitySteppers from "./UdacitySteppers";
 import DateHeader from "./DateHeader";
-import Ionicons from "../node_modules/@expo/vector-icons/Ionicons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import TextButton from "./TextButton";
 import { submit, reset } from "../utils/api";
 import { connect } from "react-redux";

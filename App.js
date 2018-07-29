@@ -7,11 +7,13 @@ import { Provider } from "react-redux";
 import recuder from "./recuders";
 import {
   createBottomTabNavigator,
-  createMaterialTopTabNavigator
+  createMaterialTopTabNavigator,
+  createStackNavigator
 } from "react-navigation";
 import { purple, white } from "./utils/colors";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Constants } from "expo";
+import EntryDetail from "./components/EntryDetail";
 
 function UdaciStatusBar({ backgroundColor, ...props }) {
   return (
@@ -21,7 +23,7 @@ function UdaciStatusBar({ backgroundColor, ...props }) {
   );
 }
 
-const RouteConfigs = {
+const TabRouteConfigs = {
   History: {
     screen: History,
     navigationOptions: {
@@ -64,8 +66,28 @@ const TabNavigatorConfig = {
 
 const Tabs =
   Platform.OS === "ios"
-    ? createBottomTabNavigator(RouteConfigs, TabNavigatorConfig)
-    : createMaterialTopTabNavigator(RouteConfigs, TabNavigatorConfig);
+    ? createBottomTabNavigator(TabRouteConfigs, TabNavigatorConfig)
+    : createMaterialTopTabNavigator(TabRouteConfigs, TabNavigatorConfig);
+
+const StackRouteConfigs = {
+  Home: {
+    screen: Tabs,
+    navigationOptions: {
+      header: null
+    }
+  },
+  EntryDetail: {
+    screen: EntryDetail,
+    navigationOptions: {
+      headerTintColor: white,
+      headerStyle: {
+        backgroundColor: purple
+      }
+    }
+  }
+};
+
+const MainNavigator = createStackNavigator(StackRouteConfigs);
 
 export default class App extends React.Component {
   render() {
@@ -73,7 +95,7 @@ export default class App extends React.Component {
       <Provider store={createStore(recuder)}>
         <View style={{ flex: 1 }}>
           <UdaciStatusBar backgroundColor={purple} barStyle="light-content" />
-          <Tabs />
+          <MainNavigator />
         </View>
       </Provider>
     );

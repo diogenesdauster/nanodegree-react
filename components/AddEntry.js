@@ -16,7 +16,7 @@ import UdacitySteppers from "./UdacitySteppers";
 import DateHeader from "./DateHeader";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import TextButton from "./TextButton";
-import { submit, reset } from "../utils/api";
+import { submit, removeEntry } from "../utils/api";
 import { connect } from "react-redux";
 import { addEntry } from "../actions";
 import { purple, white, blue } from "../utils/colors";
@@ -104,7 +104,7 @@ class AddEntry extends Component {
       })
     );
 
-    reset(key);
+    removeEntry(key);
   };
 
   render() {

@@ -14,7 +14,7 @@ Make sure you have Git and Node installed, before you proceed.
 
 To clone and run this application, you will need Git installed on your computer.
 
-`$ git clone https://github.com/disias/nanodegree-react/UdacityFitness.git`
+`$ git clone https://github.com/disias/nanodegree-react/UdacityFitness`
 
 #### 2. Run "npm install" in your local repository's folder
 
@@ -32,7 +32,7 @@ To get started developing right away:
 
 #### 4. App look Like
 
-<img src="https://github.com/disias/nanodegree-react/UdacityFitness/blob/screenshots/video_udacityfitness.gif" alt="UdacityFitness"/>
+<img src="https://github.com/disias/nanodegree-react/blob/UdacityFitness/screenshots/video_udacityfitness.gif" alt="UdacityFitness"/>
 
 ### Resources and Documentation:
 

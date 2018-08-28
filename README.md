@@ -21,5 +21,5 @@ This project hosts each sample in separate repository branches. For more informa
 ### React-Native samples
 | Sample | Description |
 | ------------- | ------------- |
-| [UdacityFitness](https://github.com/disias/nanodegree-react/tree/UdacityFitness) | This project was made for practicing React-Native(https://facebook.github.io/react-native/) using main components about it |
+| [UdacityFitness](https://github.com/disias/nanodegree-react/tree/UdacityFitness) | This project was made for practicing [React-Native](https://facebook.github.io/react-native/) using main components about it |
 | [FlexBoxExamples](https://github.com/disias/nanodegree-react/tree/FlexBoxExamples) | This project was made for practicing FlexBox. It's a pattern for building UI in the React-Native  |

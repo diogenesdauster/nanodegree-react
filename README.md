@@ -13,7 +13,9 @@ This project hosts each sample in separate repository branches. For more informa
 ### React samples 
 | Sample | Description |
 | ------------- | ------------- |
-| [Udacimeals](https://github.com/disias/nanodegree-react/tree/Udacimeals) | This project was made for practicing React(https://reactjs.org/) with Redux(https://redux.js.org/) for handling the state |
+| [Udacimeals](https://github.com/disias/nanodegree-react/tree/Udacimeals) | This project was made for practicing [React](https://reactjs.org/) with [Redux](https://redux.js.org/) for handling the state |
+| [react-contacts](https://github.com/disias/nanodegree-react/tree/react-contacts) | This project was made for practicing [React](https://reactjs.org/) with [React-Router](https://reacttraining.com/react-router/core/guides/philosophy) for handling the routes on the web app|
+
 
 
 ### React-Native samples

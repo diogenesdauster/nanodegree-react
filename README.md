@@ -44,8 +44,8 @@ To begin the React server run :
 
 This is what the app should look like, once you open it in your browser.
 
-![main_page](https://github.com/disias/nanodegree-react/blob/react-contacts/sreenshots/main_page.png)
-![second_page](https://github.com/disias/nanodegree-react/blob/react-contacts/sreenshots/second_page.png)
+![main_page](https://github.com/disias/nanodegree-react/blob/react-contacts/screenshots/main_page.png)
+![second_page](https://github.com/disias/nanodegree-react/blob/react-contacts/screenshots/second_page.png)
 
 ### Resources and Documentation:
 * [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
